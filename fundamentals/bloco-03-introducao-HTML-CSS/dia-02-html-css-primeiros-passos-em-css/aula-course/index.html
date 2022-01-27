@@ -6,9 +6,19 @@
         <title>HTML</title>
         <style>
 
+            body {
+                font-size: 16px;
+            }
+
             h1 {
                 font-size: 65px;
                 color: orange;
+                font-family: sans-serif;
+            }
+            
+            p {
+                font-weight: 600;
+                font-size: 3em;
             }
 
             ul{
@@ -17,7 +27,19 @@
 
             .body-global-p-ul {
                 background-color: paleturquoise;
+                font-style: oblique;
+                line-height: 30px;
+                text-align: center;
+                list-style-type: none;
             }
+
+            #li-yellow {
+                background-color: yellow;
+            }
+
+            #li-red {background-color: red;}
+
+            #li-brown {background-color: brown;}
 
         </style>
     </head>
@@ -26,9 +48,9 @@
         <h1>Exercícios 3.2</h1>
         <p class="body-global-p-ul">Qual é a sua cor favorita?</p>
         <ul class="body-global-p-ul">
-            <li>Amarelo</li>
-            <li>Vermelho</li>
-            <li>Marrom</li>
+            <li id="li-yellow">Amarelo</li>
+            <li id="li-red">Vermelho</li>
+            <li id="li-brown">Marrom</li>
         </ul>
     </body>
 
