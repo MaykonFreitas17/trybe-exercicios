@@ -1,0 +1,34 @@
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+ul{
+    background-color: palegreen;
+}
+
+.body-global-p-ul {
+    background-color: paleturquoise;
+    font-style: oblique;
+    line-height: 30px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#li-yellow {
+    background-color: yellow;
+}
+
+#li-red {background-color: red;}
+
+#li-brown {background-color: brown;}
