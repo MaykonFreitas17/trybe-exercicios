@@ -84,3 +84,29 @@
     li:active {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+
+/* Exercicio - Para Fixar - 3.2 */
+div:hover {
+    border: 2px solid rebeccapurple;
+}
+
+h3 {
+    font-style: italic;
+}
+
+#color-1 {
+    background-color: red;
+}
+
+#color-2 {
+    background-color: rgb(19, 11, 133);
+}
+#color-3 {
+    background-color: rgb(75, 37, 47);
+}
+#color-4 {
+    background-color: rgb(22, 158, 182);
+}
+#color-5 {
+    background-color: rgb(104, 114, 11);
+}
