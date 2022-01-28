@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #A1AAA5;
+    box-shadow: 10px 50px #A1AAA5;
+    color: black;
+}
+
+.main-header-logo-trybe {
+    width: 50%;
+    padding-left: 200px;
+}
+
+.main-header-logo-trybe > img {
+    width: 130px;
+}
+
+.main-header-navegation {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #11A36A;
+}
+
+#main-header-navegation-questions-a {
+    color: black;
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+.main-header-navegation-button {
+    border: 2px solid #11A36A;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: transparent;
+    color: #11A36A;
+}
+
+.first-section {
+    width: 100%;
+    height: 630px;
+    background-image: url(./images/smiling-image.jpeg);
+    background-position: 50% 25%;
+    background-size: cover;
+}
