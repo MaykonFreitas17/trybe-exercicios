@@ -25,3 +25,40 @@
   .border {
     border: 5px solid black;
   }
+
+  /* Exercicio - Para Fixar - 2 */
+
+  .super-mario {
+    width: 200px;
+    position: absolute;
+  }
+  
+  .goomba {
+    width: 130px;
+    position: absolute;
+    top: 380px;
+    left: 40px;
+  }
+  
+  .baloon {
+    width: 300px;
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    z-index: 1;
+  }
+  
+  .speach {
+    font-size: 25px;
+    position: absolute;
+    left: 270px;
+    top: 190px;
+    z-index: 2;
+  }
+  
+  .bowser {
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+  }
