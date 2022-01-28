@@ -62,3 +62,25 @@
     top: 200px;
     left: 500px;
   }
+
+    /* Exercicio - Para Fixar - 3 */
+    h1, p {
+        text-align: center;
+    }
+
+    ol, ul {
+        list-style: none;
+    }
+
+    li {
+        text-align: center;
+    }
+
+    li:hover {
+        background-color: aquamarine;
+        font-size: 1.5em;
+    }
+
+    li:active {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
