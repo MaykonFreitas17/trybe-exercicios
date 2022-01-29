@@ -286,3 +286,9 @@
 .fourth-section-footer-button:hover {
     background-color: #0a724a;
 }
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #0a724a;
+}
