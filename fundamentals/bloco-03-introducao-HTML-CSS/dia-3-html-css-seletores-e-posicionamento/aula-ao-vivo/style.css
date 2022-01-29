@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 1px 2px rgb(24 26 24 / 15%);
+    color: black;
+}
+
+.main-header-logo-trybe {
+    width: 50%;
+    padding-left: 200px;
+}
+
+.main-header-logo-trybe > img {
+    width: 130px;
+}
+
+.main-header-navegation {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #11A36A;
+}
+
+#main-header-navegation-questions-a {
+    color: black;
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+.main-header-navegation-button {
+    border: 2px solid #11A36A;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: transparent;
+    color: #11A36A;
+}
+
+.first-section {
+    width: 100%;
+    height: 700px;
+    background-image: url(./images/smiling-image.jpeg);
+    background-position: 50% 15%;
+    background-size: cover;
+}
+.first-section-texts {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 300px;
+    padding-top: 150px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.first-section-texts-title {
+    font-size: 45px;
+    color: #0A7E51;
+}
+
+.first-section-texts-paragraph {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.first-section-button {
+    margin-top: 30px;
+    background-color: #11a36a;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700px;
+    color: white;
+    border: none;
+    padding: 15px 25px 15px 25px;
+}
+
+.second-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.second-section-texts {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.second-section-title {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #11A36A;
+    font-weight: 600;
+}
+
+.second-section-paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.second-section-depositions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.second-section-deposition {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
+}
+
+
+.picture-deposition {
+    width: 120px;
+    border-radius: 80px;
+}
+
+.second-section-deposition-informations{
+    color: #11A36A;
+    margin-top: 15px;
+}

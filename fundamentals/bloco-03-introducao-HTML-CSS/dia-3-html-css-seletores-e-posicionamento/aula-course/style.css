@@ -1,4 +1,4 @@
-.caixa {
+/* .caixa {
     color: white;
     display: inline-block;
     line-height: 50px;
@@ -10,7 +10,6 @@
     height: 50px;
     width: 50px;
   }
-  
   /* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
   .padding {
     padding: 20px;
@@ -62,8 +61,8 @@
     top: 200px;
     left: 500px;
   }
-
-    /* Exercicio - Para Fixar - 3 */
+/*
+    Exercicio - Para Fixar - 3
     h1, p {
         text-align: center;
     }
@@ -85,7 +84,7 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
-/* Exercicio - Para Fixar - 3.2 */
+    Exercicio - Para Fixar - 3.2
 div:hover {
     border: 2px solid rebeccapurple;
 }
@@ -93,7 +92,8 @@ div:hover {
 h3 {
     font-style: italic;
 }
-
+*/
+/*
 #color-1 {
     background-color: red;
 }
@@ -109,4 +109,33 @@ h3 {
 }
 #color-5 {
     background-color: rgb(104, 114, 11);
+} 
+*/
+
+/* Exercicio - Para Fixar - 4" */
+ol li{
+    background-color: yellow;
+    color: green;
+}
+
+ol li.impar {
+    text-transform: uppercase;
+    color: white;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1, h3 em {
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: 1000px;
 }
