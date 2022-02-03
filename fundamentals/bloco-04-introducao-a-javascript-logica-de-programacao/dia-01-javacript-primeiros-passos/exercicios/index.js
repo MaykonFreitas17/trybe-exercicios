@@ -178,5 +178,24 @@ function exercicio09() {
 */
 
 function exercicio10() {
-    const custo, valorVenda;
+    
+    const custo = 30, valorVenda = 50;
+    let valorVendasTotal;
+    let totalVendas = 1000;
+    
+    if(custo > 0 && valorVenda > 0) {
+        
+        let custoDeProduto = custo * (20/100);
+        
+        custoDeProduto *= totalVendas;
+        valorVendasTotal = valorVenda * totalVendas;
+
+        let lucro = valorVendasTotal - custoDeProduto;
+        
+        console.log(lucro);
+    
+    }else {
+        console.log("Erro! ... Valores Errado");
+    }
 }
+
