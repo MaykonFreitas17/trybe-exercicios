@@ -1,0 +1,12 @@
+1 - Me dirigir ao guarda-roupa
+2 - Verificar se tem roupas dentro
+    - Se Tiver:
+        3 - Verificar se tem roupas boas para vestir:
+            Se tiver: 
+                4 - Verificar se a roupa está limpa & se a roupa está cheirosa:
+                    - Se tiver:
+                        5 - Vestir a Roupa
+            Se Não tiver:
+                - Não vou a festa
+    - Se Não tiver:
+        3 - Não vou a festa
