@@ -18,22 +18,22 @@
 let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
 // let vector = [1, 2,3,4,5,6,7,8,9,10];
 function arrayOfNumbers(listNumber) {
-   let listParNumber = [];
-   for(let i = 0; i < listNumber.length; i += 1) {
-      if (listNumber[i].length != undefined) {
-         for(let j = 0; j < listNumber[i].length; j += 1) {
-            if(listNumber[i][j] % 2 == 0) {
-               listParNumber.push(listNumber[i][j]);
-            }
-         }
-      }else {
-         if(listNumber[i] % 2 == 0) {
-            listParNumber.push(listNumber[i]);
-         }
-      }
-   }
+	let listParNumber = [];
+	for(let i = 0; i < listNumber.length; i += 1) {
+		if (listNumber[i].length != undefined) {
+				for(let j = 0; j < listNumber[i].length; j += 1) {
+					if(listNumber[i][j] % 2 == 0) {
+							listParNumber.push(listNumber[i][j]);
+					}
+				}
+		}else {
+				if(listNumber[i] % 2 == 0) {
+					listParNumber.push(listNumber[i]);
+				}
+		}
+	}
 
-   return listParNumber;
+	return listParNumber;
 }
 
 console.log(arrayOfNumbers(vector));
