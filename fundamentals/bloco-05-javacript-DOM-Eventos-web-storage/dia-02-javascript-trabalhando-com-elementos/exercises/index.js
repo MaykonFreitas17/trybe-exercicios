@@ -51,7 +51,31 @@ rightContent.appendChild(listRightContent);
 let textH3 = ['Tainá', 'Oliveira', 'Lima'];
 for (let i = 0; i < 3; i += 1) {
     let subTitlesH3 = document.createElement('h3');
+    subTitlesH3.className = 'description'; // 2. Adicione a classe description nas 3 tags h3 criadas;
     subTitlesH3.innerHTML = textH3[i];
     mainContent.appendChild(subTitlesH3);
 }
 
+// Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+
+// 1. Adicione a classe title na tag h1 criada;
+bodyTitleH1.className = 'title';
+
+// 2. Adicione a classe description nas 3 tags h3 criadas;
+    //OK
+
+// 3. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+mainContent.removeChild(leftContent);
+
+// 4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+rightContent.style.marginRight = 'auto';
+
+// 5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+centerContent.parentNode.style.background = 'green';
+
+// 6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+let nineListItem = listRightContent.children[8];
+let tenListItem = listRightContent.children[9];
+
+listRightContent.removeChild(nineListItem);
+listRightContent.removeChild(tenListItem);
