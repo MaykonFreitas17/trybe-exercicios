@@ -31,7 +31,9 @@ console.log(threeChildren);
 let father = document.querySelector('#pai').children;
 console.log(father[2]);
 father = document.querySelector('#pai')
+
 //PARTE II - CRIANDO ELEMENTOS
+
 // 1. Crie um irmão para elementoOndeVoceEsta .
 let newBrother = document.createElement('section');
 newBrother.id = 'elementoOndeVoceEsta2';
@@ -50,3 +52,5 @@ whereYouAre.firstElementChild.appendChild(firstChildChildChild);
 // 4. A partir desse filho criado, acesse terceiroFilho .
 let threeChild = firstChildChildChild.parentNode.parentElement;
 console.log(threeChild.nextElementSibling);
+
+//PARTE III - REMOVENDO ELEMENTOS
