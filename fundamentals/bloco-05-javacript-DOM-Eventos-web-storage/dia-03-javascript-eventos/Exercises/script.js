@@ -30,9 +30,16 @@ function setDaysInList(listDays, className) {
 	// Criando os dias dinamicamentes
 	for (let i = 0; i < listDays.length; i += 1) {
 		let day = document.createElement('li');
-		day.className = className;
+
 		day.innerText = listDays[i];
-		
+		day.className = className;
+
+		if (listDays[i] === 24 || listDays[i] === 25 || listDays[i] === 31) {
+			day.className += ' holiday';
+		} else if (listDays[i] === 4 || listDays[i] === 11 || listDays[i] === 18 ||listDays[i] === 25) {
+			day.className += ' friday';
+		}
+
 		// Adicionando como filho da lista
 		weekDaysList.appendChild(day);
 	}
@@ -63,10 +70,38 @@ function createButtonChild(string) {
 }
 
 createButtonChild('Feriados');
+console.log(buttonsContainer.children);
 
 /**
 * 	Exercício 3:
 			Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 			É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 */
+let listDays = document.querySelectorAll('.holiday');
+console.log(listDays);
 
+let button = buttonsContainer.children[0];
+
+button.addEventListener('click', switchingColorHoliday);
+
+let holiday = document.querySelectorAll('.holiday');
+console.log(listDays[0].style);
+let holidayOn = false;
+function switchingColorHoliday () {
+	let listDays = document.querySelectorAll('.holiday');
+	
+	if (holidayOn === false) {
+		for (let i = 0; i < listDays.length; i += 1) {
+			listDays[i].style.background = '#008000';
+			listDays[i].style.color = 'white';
+			holidayOn = true;
+		}
+	}else {
+		for (let i = 0; i < listDays.length; i += 1) {
+			listDays[i].style.background = 'rgb(238,238,238)';
+			listDays[i].style.color = '#666666';
+			holidayOn = false;
+		}
+	}
+	
+}
