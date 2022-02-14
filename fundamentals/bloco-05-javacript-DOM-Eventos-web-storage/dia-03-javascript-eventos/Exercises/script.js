@@ -181,3 +181,64 @@ function createTask(task) {
 }
 
 createTask('Dia 15: Projetos');
+
+/**
+ * Exercício 8:
+		Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+		O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+		O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+*/
+
+function createSubtitleColor(color) {
+	let subtitle = document.createElement('div');
+	
+	subtitle.className = 'task';
+
+	subtitle.style.width = '20px';
+	subtitle.style.height = '20px';
+	subtitle.style.background = color;
+
+	myTasksContainer.appendChild(subtitle);
+}
+
+createSubtitleColor('red');
+
+/**
+ * Exercício 9:
+		Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+		Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada. 
+*/
+let taskDivList = document.querySelectorAll('.task');
+let taskDivListOn = false;
+for (let i = 0; i < taskDivList.length; i += 1) {
+		
+		taskDivList[i].addEventListener('click' , function(event){
+			let task = event.target;
+			if (taskDivListOn) {
+				task.className = 'task';
+				taskDivListOn = false;
+			}else{
+				task.className = 'task selected';
+				taskDivListOn = true;
+			}
+		});
+}
+
+/**
+ * Exercício 10:
+		Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+		Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+ */
+console.log(taskDivList[0].style.background);
+for (let i = 0; i < allDays.length; i += 1) {
+	//aplicar o Zoom
+	allDays[i].addEventListener('click', function(event){
+		if (taskDivListOn) {
+			let currentDay = event.target;
+			currentDay.style.color = taskDivList[0].style.background;
+		}else {
+			let currentDay = event.target;
+			currentDay.style.color = 'rgb(119,119,119)';
+		}
+	});
+}
