@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TrybeTrip - Formulario</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header class="container">
+		<div class="mb-3">
+			<h1 class="display-3 text-center">Formulário da TrybeTrip</h1>
+		</div>
+	</header>
+	<main class="container">
+		<form id="form">
+
+			<div class="mb-3">
+				<label class="form-label text-muted" for="input-name">Nome: </label>
+				<input class="form-control" type="text" name="inputName" id="input-name" minlength="10" maxlength="40">
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label text-muted" for="input-name">Email: </label>
+				<input class="form-control" type="email" name="inputEmail" id="input-email" minlength="10" maxlength="50">
+			</div>
+
+			<div class="mb-3">
+				<p class="text-muted">Destino Preferido:</p>
+				<div id="optionsRadios">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputRadios" id="option01" value="cidade" >
+						<label class="form-label" for="option01"> Cidade </label>		
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputRadios" id="option02" value="campo" >
+						<label class="form-label" for="option02"> Campo </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputRadios" id="option03" value="praia" >
+						<label class="form-label" for="option03"> Praia </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputRadios" id="option04" value="montanhas" >
+						<label class="form-label" for="option04"> Montanhas </label>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<div class="form-floating">
+					<textarea class="form-control" id="floatingTextarea2" style="height: 200px"></textarea>
+					<label for="floatingTextarea2">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label text-muted" for="dateInput">Qual a melhor data para realizar sua viagem?</label>
+				<input class="form-control" type="text" name="" id="dateInput">
+			</div>
+
+			<div class="mb-3">
+
+				<div class="form-check">
+					<p class="text-muted">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</p>
+					<label class="form-check-label" for="concordo1">Concordo 1</label>
+					<input class="form-check-input" type="checkbox" name="" id="concordo1">
+				</div>
+
+				<div class="form-check">
+					<p class="text-muted">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</p>
+					<label class="form-check-label" for="concordo2">Concordo 2</label>
+					<input class="form-check-input" type="checkbox" name="" id="concordo2">
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<button class="btn btn-success btn-lg" type="submit" id="btn-submit">Enviar</button>
+				<button class="btn btn-primary btn-lg" type="reset" id="btnClean" >Apagar</button>
+			</div>
+
+		</form>
+	</main>
+	<script src="moment-with-locales.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+	<script  src =" https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js " ></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

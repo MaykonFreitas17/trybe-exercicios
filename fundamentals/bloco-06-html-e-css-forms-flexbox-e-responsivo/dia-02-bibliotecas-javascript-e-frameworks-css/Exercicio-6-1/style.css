@@ -1,0 +1,9 @@
+.container {
+	width: 40%;
+	/* border: 1px solid #CBCFD1; */
+}
+
+.mb-3 {
+	padding: 15px!important;
+	margin-bottom: 20px!important;
+}
