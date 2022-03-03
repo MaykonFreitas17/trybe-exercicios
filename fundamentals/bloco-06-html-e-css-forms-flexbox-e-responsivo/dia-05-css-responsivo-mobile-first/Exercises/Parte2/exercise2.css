@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Layout pequeno */
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header p {
+    font-size: 20px;
+    text-align: center; 
+  }
+
+  header nav {
+    width: 100%;
+    display: none;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  ul{
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  li{
+    list-style: none;
+    margin-bottom: 2px;
+  }
+  article {
+    width: 100%;
+  }
+  article h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer h3 {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Layout médio */
+@media screen and (max-width: 1279px) and (min-width: 601px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  header nav {
+    width: 100%;
+    display: none;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  ul{
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  li{
+    list-style: none;
+    margin-bottom: 2px;
+  }
+  article {
+    width: 100%;
+  }
+  article h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer h3 {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body { background-color: rgb(7, 129, 62); }
+}
+
+/* Layout Grande */
