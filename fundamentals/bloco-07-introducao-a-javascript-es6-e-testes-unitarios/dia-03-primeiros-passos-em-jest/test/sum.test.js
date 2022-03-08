@@ -8,7 +8,7 @@ const sum = require('../scripts/sum');
   -> Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
 */
 
-describe('1º exercicio - Função SUM', () => {
+// describe('1º exercicio - Função SUM', () => {
   
   it('Se sum(4, 5) é 9', () => {
     expect(sum(4, 5)).toBe(9);
@@ -18,9 +18,9 @@ describe('1º exercicio - Função SUM', () => {
     expect(sum(0, 0)).toBe(0);
   });
 
-  // it('Se sum(4, "5") é parameters must be numbers', () => {
-  //   expect(sum(4, '5')).toThrow(Error);
-  // });
+  it('Se sum(4, "5") é parameters must be numbers', () => {
+    expect(() => { sum(4, '5') }).toThrow();
+  });
 
 
-})
+// });
