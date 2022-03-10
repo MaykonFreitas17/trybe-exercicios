@@ -32,7 +32,7 @@ const battleMembers = { mage, warrior, dragon };
  *    O dano será um número aleatório entre 15 (dano mínimo) e o valor do atributo strength (dano máximo). 
 */
 
-const damageDragon = (dragon) => { 
+const damageDragon = (dragon) => {
   const min = Math.ceil(15);
   const max = Math.floor(dragon.strength);
   const damage = Math.floor(Math.random() * (max - min)) + min;
