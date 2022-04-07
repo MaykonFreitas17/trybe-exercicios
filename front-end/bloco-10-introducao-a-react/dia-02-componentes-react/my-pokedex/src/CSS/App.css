@@ -1,0 +1,21 @@
+.pokedex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-box {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(134, 133, 133);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.pokemon-informations {
+  display: flex;
+  flex-direction: column;
+}
