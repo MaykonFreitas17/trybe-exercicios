@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+      <button id="random-color">Random color</button>
+    </div>
+    <script>
+      const colorContainer = document.querySelector('#value');
+      const bttNext = document.querySelector('#next');
+      const bttPrevious = document.querySelector('#previous');
+      const bttRandomColor = document.querySelector('#random-color');
+      
+      function criarCor() {
+        const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        let cor = '#';
+        const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+        for (let i = 0; i < 6; i += 1) {
+            cor += oneChar[aleatorio()];
+        }
+        return cor;
+      }
+
+      const ESTADO_INICIAL = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      /*
+        2 - Crie um reducer, implementando um switch retornando apenas o estado inicial como default. 
+        Não se esqueça de colocar o reducer como parâmetro para o createStore, feito na etapa anterior.
+      */
+
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        switch(action.type) {
+          case 'NEXT_COLOR':
+            return {
+              colors: [...state.colors ],
+              index: state.index < state.colors.length - 1 ? state.index + 1 : state.colors.length - 1,
+            };
+            break;
+          case 'PREV_COLOR':
+            return {
+              colors: [...state.colors ],
+              index: state.index <= 0 ? 0 : state.index - 1,
+            };
+            break;
+          case 'RANDOM_COLOR':
+            return {
+              colors: [...state.colors, criarCor()],
+              index: state.colors.length,
+            };
+            break;
+          default: return { ...state };
+          break;
+        }
+      };
+
+      // 1 - Crie uma store para a nossa aplicação.
+      const store = Redux.createStore(reducer);
+
+      // 4 - Crie eventListeners que escutam os cliques de cada botão, o Previous color e o Next color,
+      // e realizam um dispatch com o respectivo action.type de cada.
+      bttPrevious.addEventListener("click", () => {
+        store.dispatch({ type: 'PREV_COLOR' });
+      });
+
+      bttNext.addEventListener("click", () => {
+        store.dispatch({ type: 'NEXT_COLOR' });
+      });
+
+      bttRandomColor.addEventListener("click", () => {
+        store.dispatch({ type: 'RANDOM_COLOR' });
+      });
+
+      store.subscribe(() => {
+        // 5 - Faça o subscribe da store, alterando o innerHTML da tag com id value para a cor atual e o 
+        // style do elemento com id container. Você deverá ser capaz de ver as cores mudando ao fundo, e o 
+        // nome da cor exibida.
+        const { colors, index } = store.getState();
+        console.log(store.getState(), index);
+        colorContainer.innerText = colors[index];
+      });
+    </script>
+  </body>
+</html>
